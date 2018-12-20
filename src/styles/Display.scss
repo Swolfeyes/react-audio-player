@@ -10,16 +10,16 @@ $list: (flower, lotus, lake);
         position: relative;
         display: table;
         margin: 20px auto;
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 2px 2px 22px 2px #c5c5d3;
 
         &::before {
             content: '';
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: #fffcfb;
             position: absolute;
             top: 50%;
