@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+.audio-player {
+    width: 375px;
+    height: 667px;
+    padding: 20px;
+    margin: 50px auto;
+    font-family: 'Josefin Sans', sans-serif;
+    background: #fffcfb;
+    box-shadow: 1px 0px 28px 1px #c5c5d3, inset -1px 0px 8px 1px #e0dddc;
+    border-radius: 20px;
+
+    &__display {
+        width: 100%;
+        padding: 50px;
+    }
+
+    &__track-time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #c5c5d3;
+
+        &__current-time {
+            width: 30px;
+        }
+        
+        &__progress-bar {
+            margin: 0 10px;
+            width: 255px;
+            height: 5px;
+            border-radius: 6px;
+            position: relative;
+            background: #c5c5d3;
+            cursor: pointer;
+        
+            &__pin {
+                position: absolute;
+                height: 5px;
+                border-radius: 6px;
+                background: linear-gradient(to right, #c31432, #240b36);
+                cursor: pointer;
+            }
+        }
+
+        &__duration {
+            align-self: flex-end;
+            flex-grow: 0;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: center;
+
+        &__item {
+            padding: 10px;
+        }
+    }
+
+    &__tracks-list {
+        color: #c5c5d3;
+        padding: 20px 0px;
+    }
+}
+

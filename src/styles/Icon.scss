@@ -1,0 +1,17 @@
+.icon {
+    svg {
+        fill: #c5c5d3;
+        stroke: #c5c5d3;
+        width: 20px;
+        height: 20px;
+    }
+
+    &--Play, &--Pause {
+        svg {
+            fill: #929fb0;
+            stroke: #929fb0;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

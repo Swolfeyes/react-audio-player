@@ -1,0 +1,93 @@
+$list: (flower, lotus, lake);
+
+.display {
+    display: table;
+    margin: auto;
+    height: 250px;
+    display: none;
+
+    &__disc {
+        position: relative;
+        display: table;
+        margin: 20px auto;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 2px 2px 22px 2px #c5c5d3;
+
+        &::before {
+            content: '';
+            width: 50px;
+            height: 50px;
+            background: #fffcfb;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__track-info {
+        display: table;
+        margin: 30px auto;
+        text-align: center;
+
+        &__title {
+            color: #929fb0 - 80;
+            font-size: 16px;
+        }
+
+        &__artist {
+            color: #929fb0;
+            font-size: 14px;
+        }
+    }
+}
+
+//States
+$parent: '.display';
+
+.display {  
+    &--active {
+        display: block;
+
+        #{$parent}__disc {
+            animation: rotating 5s linear infinite forwards;
+            animation-play-state: paused;
+        }
+
+        &--isPlaying {
+            
+            #{$parent}__disc {            
+                animation: rotating 5s linear infinite forwards;
+                animation-play-state: running;
+            }
+        }
+    }
+}
+
+
+// Themes
+.display {
+    @each $image in $list {
+      &__disc--#{$image} {
+        background: url('../assets/images/#{$image}.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+
+  //Animation
+  @keyframes rotating {
+    0% {
+      transform: rotateZ(0);
+    }
+  
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }

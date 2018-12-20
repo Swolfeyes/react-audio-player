@@ -1,0 +1,16 @@
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+        padding: 10px;
+        cursor: pointer;
+
+        .play {
+            svg {
+                fill: #929dae;
+            }
+        }
+    }
+}
