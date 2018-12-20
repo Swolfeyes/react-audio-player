@@ -1,3 +1,3 @@
-React audio player with music and picture from Creative Common. 
+React audio player with music and pictures from Creative Common. 
 
-Design inspire by https://dribbble.com/shots/3407213-Mix-Planet-sketch-freebie
+Design inspired by https://dribbble.com/shots/3407213-Mix-Planet-sketch-freebie
