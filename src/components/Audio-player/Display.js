@@ -20,8 +20,6 @@ const Display = ({ title, artist, active, image, isPlaying }) => {
         [`display__disc--${image}`]: image,
     });
 
-    console.log(image)
-
     return (
         <div className={classes}>
             <div className={discClasses}></div>
