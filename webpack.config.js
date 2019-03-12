@@ -21,7 +21,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.jpg$/,
+        test: /\.(jpg|mp3)$/,
         include: path.join(__dirname, 'src'),
         exclude: path.resolve(__dirname, 'node_modules'),
         use: [
@@ -44,13 +44,6 @@ module.exports = {
          },
         ],
       },
-      {
-        test: /\.mp3$/,
-        loader: 'url-loader',
-        query: {
-           name: '[path][name].[hash:8].[ext]'
-        }
-     },
       {
         test: /\.scss$/,
         use: [
