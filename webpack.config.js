@@ -25,9 +25,9 @@ module.exports = {
         include: path.join(__dirname, 'src'),
         exclude: path.resolve(__dirname, 'node_modules'),
         use: [
-          { loader: 'file-loader',
+          { loader: 'url-loader',
             options: {
-              name: '/assets/[name].[ext]'
+              name: '[path][name].[ext]'
             },
          },
         ],
@@ -39,16 +39,16 @@ module.exports = {
         use: [
           { loader: 'raw-loader',
             options: {
-              name: '[path][name].[ext]'
+              name: '/assets/[name].[ext]'
             },
          },
         ],
       },
       {
         test: /\.mp3$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         query: {
-           name: '/assets/[name].[hash:8].[ext]'
+           name: '[path][name].[hash:8].[ext]'
         }
      },
       {
