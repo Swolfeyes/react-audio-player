@@ -27,7 +27,7 @@ module.exports = {
         use: [
           { loader: 'file-loader',
             options: {
-              name: '[path][name].[ext]'
+              name: '/assets/[name].[ext]'
             },
          },
         ],
@@ -48,7 +48,7 @@ module.exports = {
         test: /\.mp3$/,
         loader: 'file-loader',
         query: {
-           name: '[path][name].[hash:8].[ext]'
+           name: '/assets/[name].[hash:8].[ext]'
         }
      },
       {
