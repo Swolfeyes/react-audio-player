@@ -6,7 +6,7 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    publicPath: './dist',
+    publicPath: '/',
     path: path.join(__dirname, 'dist'),
   },
 
@@ -27,7 +27,7 @@ module.exports = {
         use: [
           { loader: 'file-loader',
             options: {
-              name: '/assets/[name].[ext]'
+              name: '[path][name].[ext]'
             },
          },
         ],
@@ -39,11 +39,18 @@ module.exports = {
         use: [
           { loader: 'raw-loader',
             options: {
-              name: '/assets/[name].[ext]'
+              name: '[path][name].[ext]'
             },
          },
         ],
       },
+      {
+        test: /\.mp3$/,
+        loader: 'file-loader',
+        query: {
+           name: '[path][name].[hash:8].[ext]'
+        }
+     },
       {
         test: /\.scss$/,
         use: [

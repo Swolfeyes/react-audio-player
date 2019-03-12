@@ -149,7 +149,7 @@ class AudioPlayer extends React.Component {
 
     buildTracksList() {
 
-        const { currentTrackIndex, isPlaying } = this.state;
+        const { currentTrackIndex } = this.state;
 
         return tracks.map((item, index) => {
             return (
