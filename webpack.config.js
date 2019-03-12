@@ -21,11 +21,23 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|mp3)$/,
+        test: /\.jpg$/,
         include: path.join(__dirname, 'src'),
         exclude: path.resolve(__dirname, 'node_modules'),
         use: [
           { loader: 'url-loader',
+            options: {
+              name: '[path][name].[ext]'
+            },
+         },
+        ],
+      },
+      {
+        test: /\.mp3$/,
+        include: path.join(__dirname, 'src'),
+        exclude: path.resolve(__dirname, 'node_modules'),
+        use: [
+          { loader: 'file-loader',
             options: {
               name: '[path][name].[ext]'
             },
